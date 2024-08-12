@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DApp - Retrieve Untapped Goldmine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Retrieve Untapped Goldmine</h1>
+
+        <div id="connectWallet">
+            <button onclick="connectWallet()">Connect Wallet</button>
+        </div>
+
+        <div id="gameInfo" style="display: none;">
+            <p>Start Time: <span id="startTime"></span></p>
+            <p>End Time: <span id="endTime"></span></p>
+            <p>Last Buyer: <span id="lastBuyer"></span></p>
+            <p>Pot Size: <span id="potSize"></span></p>
+            <p>Total Keys Purchased: <span id="totalKeysPurchased"></span></p>
+            <p>Current Ticket Price: <span id="currentTicketPrice"></span></p>
+            <p>Total ETH Received: <span id="totalETHReceived"></span></p>
+            <p>Your Keys: <span id="yourKeys"></span></p>
+            <p>Reward Available: <span id="rewardAvailable"></span></p>
+            <p>Grand Prize Claimed: <span id="grandPrizeClaimed"></span></p>
+        </div>
+
+        <div id="actions" style="display: none;">
+            <input type="number" id="keyAmount" placeholder="Number of keys to purchase">
+            <button onclick="purchaseKeys()">Purchase Keys</button>
+            <button onclick="claimReward()">Claim Reward</button>
+            <button onclick="claimGrandPrize()">Claim Grand Prize</button>
+            <button onclick="claimPrize()">Claim Prize</button>
+            <button onclick="transferToBankroll()">Transfer to Bankroll</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="app.js"></script>
+</body>
+</html>
